@@ -59,28 +59,21 @@ export function AboutSection() {
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  I'm a passionate full-stack developer and designer with over 5 years of experience 
-                  creating digital solutions that bridge the gap between design and technology. 
-                  My journey started with a curiosity about how things work and evolved into a 
-                  love for building products that people enjoy using.
+                  I love tackling interesting challenges and finding creative ways to solve them. There's something really satisfying about diving into complex data or leading a project and watching it come together—I get energized by turning ideas into something tangible that actually makes a difference. 
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                  I specialize in modern web technologies including React, TypeScript, Node.js, 
-                  and cloud platforms. When I'm not coding, you'll find me exploring new design 
-                  trends, contributing to open-source projects, or mentoring aspiring developers.
+                  When I'm not working, you'll probably find me out on the tennis court (still trying to perfect that backhand!) or hanging out with my family, whether we're exploring somewhere new or just enjoying a lazy Sunday at home. 
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.5 }}
                 >
-                  I believe in the power of collaboration, continuous learning, and creating 
-                  technology that serves humanity. Every project is an opportunity to solve 
-                  real problems and make someone's day a little better.
+                  I believe the best work happens when you bring genuine curiosity and care to what you do.
                 </motion.p>
               </div>
             </motion.div>

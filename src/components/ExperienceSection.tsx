@@ -1,57 +1,111 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { CalendarDays, MapPin } from "lucide-react";
+import { title } from "process";
 
 export function ExperienceSection() {
   const experiences = [
     {
-      title: "Senior Full Stack Developer",
-      company: "TechCorp Solutions",
-      location: "San Francisco, CA",
-      duration: "2022 - Present",
-      description: "Lead developer for multiple high-traffic web applications serving 100K+ users. Architected scalable microservices and improved system performance by 40%.",
+      title: "Business Systems Analyst III | Product Manager in Business Intelligence",
+      company: "Arch Capital Group",
+      location: "Raleigh, NC",
+      duration: "Feb 2024 - Present",
+      description: "Leading strategic initiatives in business intelligence reporting & insights, as well as data architecture modernization.",
       achievements: [
-        "Led a team of 5 developers in building a customer portal that increased user engagement by 60%",
-        "Implemented CI/CD pipelines reducing deployment time from 2 hours to 15 minutes",
-        "Mentored junior developers and conducted technical interviews"
+        "Led the design, implementation and launch of a new transaction flow supporting 2nd liens business growth at Arch MI.",
+        "Modernized BI platform by developing Power BI dashboards with AI enabled Q&A, while integrating and repurposing legacy Cognos reports.",
+        "Built and maintained a strategic product roadmap aligning business and technology priorities, and managed iterative delivery through feature and story breakdowns.",
+        "Engineered a Python-based data lineage system tracking 300+ reports, bridging technical and business understanding.",
+        "Built correlation on report similatiry analysis and duplicate data identification.",
+        "Optimized production release cycles by refining change management, enhancing product lifecycle control.",
+        "Led cloud migration planning for product that leveraged Azure."
       ],
-      technologies: ["React", "Node.js", "AWS", "PostgreSQL", "Docker"]
+      technologies: ["Snowflake", "IBM Cognos", "PowerBI", "Data Vault", "SQL","Coalesc", "Python" ]
     },
     {
-      title: "Frontend Developer",
-      company: "Digital Innovations Inc",
-      location: "Remote",
-      duration: "2020 - 2022",
-      description: "Developed responsive web applications and collaborated with UX/UI designers to create exceptional user experiences. Specialized in React ecosystem and modern JavaScript.",
+      title: "Business Systems Analyst III - Alternative Markets",
+      company: "Arch Capital Group",
+      location: "Raleigh, NC",
+      duration: "Nov 2022 - Feb 2024",
+      description: "Modernized loan data systems through UI/UX design, data validation architecture, and ML-driven analytics to enable data-driven lending decisions.",
       achievements: [
-        "Built a dashboard application that reduced client reporting time by 50%",
-        "Converted legacy jQuery applications to React, improving maintainability",
-        "Established frontend coding standards and best practices for the team"
+        "Designed and delivered intuitive UI/UX solutions for loan data ingestion and analysis platforms using Balsamiq, enhancing user experience while adhering to customer-centric product management methodologies.",
+        "Engineered comprehensive data validation frameworks with automated rule sets to detect and flag inconsistencies across multiple market data sources, ensuring data integrity and reliability.",
+        "Architected enterprise data flow systems to establish a unified golden source of loan data, enabling strategic data-driven decision making across business operations.",
+        "Developed machine learning classification models as proof-of-concept solutions to optimize loan purchase identification processes, demonstrating advanced analytical capabilities and innovation."
       ],
-      technologies: ["React", "TypeScript", "Redux", "Sass", "Jest"]
+      technologies: ["Azure", "Python", "Databricks", "UI/UX", "SQL", "Balsamiq" ]
     },
     {
-      title: "Junior Web Developer",
-      company: "StartupXYZ",
-      location: "Austin, TX",
-      duration: "2019 - 2020",
-      description: "Started my professional journey in a fast-paced startup environment. Worked on various projects from landing pages to full-stack applications.",
+      title: "Business Analyst | Product Owner",
+      company: "Credit Suisse",
+      location: "Raleigh, NC",
+      duration: "Feb 2020 - Nov 2022",
+      description: "Delivered global reconciliation technology solutions across NA/EU/UK jurisdictions while leading cross-functional teams and translating regulatory requirements into technical specifications.",
       achievements: [
-        "Developed responsive marketing websites that increased lead generation by 35%",
-        "Collaborated with designers to implement pixel-perfect UI components",
-        "Contributed to the company's first mobile application using React Native"
+        "Responded to regulatory changes by discerning the functional variations and transforming them to technical specifications.",
+        "Fostered a strong relationship with the business and partner IT teams.",
+        "Cultivated off-shore team in production incident resolutions and business processes.",
+        "Performed hands-on data analysis for production query resolutions."
       ],
-      technologies: ["JavaScript", "React", "Node.js", "MongoDB", "HTML/CSS"]
+      technologies: ["Python", "Unix", "Reconciliation", "SQL", "Grisham Rcon Tool", "MS Office Suite", "Confluence", "Jira" ]
+    },
+    {
+      title: "Business Systems Analyst (Quality Assurance)",
+      company: "Deutsche Bank",
+      location: "Cary, NC",
+      duration: "Oct 2015 - Feb 2020",
+      description: "Led global equity regulatory reporting (CAT, OATS, MIFID II, SFC) to international regulators while spearheading data normalization initiatives and FIX message mapping across Deutsche Bank's trading platforms.",
+      achievements: [
+        "My primary duty was to understand the new requirements and variations to existing reports, document them, and validated the reports generated from our reporting engine.",
+        "Was instrumental in data normalization initiative for all equity trading applications across global Deutsche Bank locations.",
+        "Played a significant role in creating a data dictionary which enabled the mapped of FIX transaction messages flow for different trade flows.",
+        "Received multiple recognitions in this job."
+      ],
+      technologies: ["SQL", "python", "Unix", "Cucumber", "Git", "TeamCity", "Jenkins" ]
+    },
+    {
+      title: "Senior Systems Analyst",
+      company: "Wells Fargo",
+      location: "Charlotte, NC",
+      duration: "Aug 2013 - Oct 2015",
+      description: "Delivered dual business and quality analysis for commodities trading platforms, achieving 0% production defect rate over two years while leading UI/UX modernization initiatives.",
+      achievements: [
+        "Worked on portfolio management, risk management and trade caption applications.",
+        "Had a good exposure to Openlink's Endur application during this job.",
+        "Was a guiding force in building a new UI of the application. Focus was on creating an impressive UX.",
+        "A feather in the hat was having a 0% defect leakage in production release over a span of over two years."
+      ],
+      technologies: ["MS Office Suite", "Unix", "SQL", "Openlink Endur","ICE"]     
+    },
+    {
+      title: "Business Systems Analyst",
+      company: "Capital Group Companies",
+      location: "Los Angeles, CA",
+      duration: "Oct 2009 - Jul 2013",
+      description: "Managed fixed income data analytics and application validation processes while ensuring system stability and delivering cost savings through strategic resource optimization.",
+      achievements: [
+        "Ensured stability, enhancement verifications and regression validations of a multitude of fixed income applications.",
+        "Achieved considerable savings in the project through proper resource allocation."
+      ],
+      technologies: ["SQL", "MS Office Suite", "HP Quality Center" ]
     }
   ];
 
   const education = [
     {
-      degree: "Bachelor of Science in Computer Science",
-      school: "University of Technology",
-      location: "California, USA",
-      duration: "2015 - 2019",
-      details: "Graduated Magna Cum Laude. Relevant coursework: Data Structures, Algorithms, Web Development, Database Systems, Software Engineering."
+      degree: "Masters of Business Administration (MBA), Finance & Marketing",
+      school: "Indian Institute of Technology (IIT) Roorkee",
+      location: "Roorkee, India",
+      duration: "2006 - 2008",
+      // details: "Graduated Magna Cum Laude. Relevant coursework: Data Structures, Algorithms, Web Development, Database Systems, Software Engineering."
+    },
+    {
+      degree: "Bachelor of Engineering (B.E.), Mechanical Engineering",
+      school: "Manipal University",
+      location: "Manipal, India",
+      duration: "2002 - 2006",
+      // details: "Graduated with Honors. Relevant coursework: Data Structures, Algorithms, Web Development, Database Systems, Software Engineering."
     }
   ];
 

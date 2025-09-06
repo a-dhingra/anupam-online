@@ -37,19 +37,19 @@ export function ContactSection() {
     {
       icon: Mail,
       label: "Email",
-      value: "john.doe@example.com",
-      href: "mailto:john.doe@example.com"
+      value: "anupamdhingra@gmail.com",
+      href: "mailto:anupamdhingra@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+1 (310) 733-7049",
       href: "tel:+15551234567"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Cary, NC",
       href: null
     }
   ];
@@ -58,18 +58,18 @@ export function ContactSection() {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com/johndoe"
+      href: "https://github.com/a-dhingra"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/johndoe"
+      href: "https://linkedin.com/in/anupamdhingra"
     },
-    {
-      icon: Twitter,
-      label: "Twitter",
-      href: "https://twitter.com/johndoe"
-    }
+    // {
+    //   icon: Twitter,
+    //   label: "Twitter",
+    //   href: "https://twitter.com/johndoe"
+    // }
   ];
 
   return (
@@ -133,7 +133,7 @@ export function ContactSection() {
                           value={formData.email}
                           onChange={handleInputChange}
                           required
-                          placeholder="your.email@example.com"
+                          placeholder="anupamdhingra@gmail.com"
                           className="transition-all duration-200 focus:scale-[1.02]"
                         />
                       </motion.div>
@@ -282,10 +282,10 @@ export function ContactSection() {
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.4, delay: 1.2 }}
                   >
-                    <p className="text-sm text-muted-foreground">
+                    {/* <p className="text-sm text-muted-foreground">
                       Available for freelance projects and full-time opportunities. 
                       Let's build something amazing together!
-                    </p>
+                    </p> */}
                   </motion.div>
                 </CardContent>
               </Card>
