@@ -34,7 +34,7 @@ export function HeroSection() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 1.5 }}
               >
-                John Doe
+                Anupam Dhingra
               </motion.span>
             </motion.h1>
             
@@ -44,7 +44,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.7 }}
             >
-              Full Stack Developer & UI/UX Designer
+              Product Management  |  Data Analysis  |  Growth Strategy
             </motion.h2>
             
             <motion.p 
@@ -53,8 +53,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.9 }}
             >
-              I create beautiful, functional, and user-centered digital experiences. 
-              With 5+ years of experience in web development and design, I bring ideas to life through code and creativity.
+              I create and execute solutions to problems pertaining to data, UI/UX and/or process. I have a knack for identifying growth opportunities and optimizing user experiences through data-driven strategies. My domain expertise has been in Capital Markets and Insurance.
             </motion.p>
             
             <motion.div 
@@ -83,9 +82,9 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 2.3 }}
             >
               {[
-                { icon: Github, href: "https://github.com", label: "GitHub" },
-                { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-                { icon: Mail, href: "mailto:john@example.com", label: "Email" }
+                { icon: Github, href: "https://github.com/a-dhingra", label: "GitHub" },
+                { icon: Linkedin, href: "https://linkedin.com/in/anupamdhingra", label: "LinkedIn" },
+                { icon: Mail, href: "mailto:anupamdhingra@gmail.com", label: "Email" }
               ].map((social, index) => (
                 <motion.div
                   key={social.label}
@@ -124,8 +123,11 @@ export function HeroSection() {
                 transition={{ duration: 1, delay: 2 }}
               >
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1576558656222-ba66febe3dec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDF8fHx8MTc1NjQ3NjcyOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="John Doe - Professional headshot"
+                  // src="https://unsplash.com/photos/man-wearing-a-beanie-and-shirt-works-on-a-laptop-n2QIWPTYxOg"
+                  // src="https://images.unsplash.com/photo-1576558656222-ba66febe3dec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDF8fHx8MTc1NjQ3NjcyOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  // src="/src/assets/profile_pic/AnupamDhingra.jpg"
+                  src="/src/assets/profile_pic/Pic_resized.webp"
+                  alt="Anupam Dhingra - Professional headshot"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
