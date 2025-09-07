@@ -33,26 +33,26 @@ export function ContactSection() {
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "anupamdhingra@gmail.com",
-      href: "mailto:anupamdhingra@gmail.com"
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+1 (310) 733-7049",
-      href: "tel:+15551234567"
-    },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "Cary, NC",
-      href: null
-    }
-  ];
+  // const contactInfo = [
+  //   {
+  //     icon: Mail,
+  //     label: "Email",
+  //     value: "anupamdhingra@gmail.com",
+  //     href: "mailto:anupamdhingra@gmail.com"
+  //   },
+  //   {
+  //     icon: Phone,
+  //     label: "Phone",
+  //     value: "+1 (310) 733-7049",
+  //     href: "tel:+15551234567"
+  //   },
+  //   {
+  //     icon: MapPin,
+  //     label: "Location",
+  //     value: "Cary, NC",
+  //     href: null
+  //   }
+  // ];
 
   const socialLinks = [
     {
@@ -82,20 +82,20 @@ export function ContactSection() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl mb-4">Get In Touch</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-1xl mb-4">Get In Touch</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Have a project in mind or want to collaborate? I'd love to hear from you.
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-1 gap-2">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Card>
+              {/* <Card>
                 <CardHeader>
                   <CardTitle>Send me a message</CardTitle>
                 </CardHeader>
@@ -188,7 +188,7 @@ export function ContactSection() {
                     </motion.div>
                   </form>
                 </CardContent>
-              </Card>
+              </Card> */}
             </motion.div>
 
             {/* Contact Information */}
@@ -198,7 +198,7 @@ export function ContactSection() {
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Card>
+              {/* <Card>
                 <CardHeader>
                   <CardTitle>Contact Information</CardTitle>
                 </CardHeader>
@@ -235,15 +235,15 @@ export function ContactSection() {
                     </motion.div>
                   ))}
                 </CardContent>
-              </Card>
+              </Card> */}
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Follow Me</CardTitle>
+                  <CardTitle></CardTitle>
                 </CardHeader>
                 <CardContent>
                   <motion.div 
-                    className="flex gap-4"
+                    className="flex gap-4 flex-wrap justify-center items-center"
                     initial={{ opacity: 0 }}
                     animate={isInView ? { opacity: 1 } : {}}
                     transition={{ duration: 0.4, delay: 0.8 }}
