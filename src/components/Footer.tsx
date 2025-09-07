@@ -18,9 +18,9 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/johndoe", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com/in/johndoe", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:john.doe@example.com", label: "Email" }
+    // { icon: Github, href: "https://github.com/johndoe", label: "GitHub" },
+    // { icon: Linkedin, href: "https://linkedin.com/in/johndoe", label: "LinkedIn" },
+    // { icon: Mail, href: "mailto:john.doe@example.com", label: "Email" }
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -47,11 +47,11 @@ export function Footer() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <h3 className="text-xl mb-4">John Doe</h3>
-              <p className="text-muted-foreground mb-4">
+              {/* <h3 className="text-xl mb-4">John Doe</h3> */}
+              {/* <p className="text-muted-foreground mb-4">
                 Full Stack Developer & UI/UX Designer passionate about creating 
                 exceptional digital experiences.
-              </p>
+              </p> */}
               <div className="flex gap-3">
                 {socialLinks.map((social, index) => (
                   <motion.div
@@ -87,8 +87,8 @@ export function Footer() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h4 className="mb-4">Quick Links</h4>
-              <nav className="space-y-2">
+              {/* <h4 className="mb-4">Quick Links</h4> */}
+              {/* <nav className="space-y-2">
                 {quickLinks.map((link, index) => (
                   <motion.button
                     key={index}
@@ -102,7 +102,7 @@ export function Footer() {
                     {link.name}
                   </motion.button>
                 ))}
-              </nav>
+              </nav> */}
             </motion.div>
 
             {/* Contact Info */}
@@ -111,28 +111,28 @@ export function Footer() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <h4 className="mb-4">Get In Touch</h4>
+              {/* <h4 className="mb-4">Get In Touch</h4> */}
               <div className="space-y-2 text-muted-foreground">
                 <motion.p
                   initial={{ opacity: 0 }}
                   animate={isInView ? { opacity: 1 } : {}}
                   transition={{ duration: 0.3, delay: 0.4 }}
                 >
-                  San Francisco, CA
+                  {/* San Francisco, CA */}
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0 }}
                   animate={isInView ? { opacity: 1 } : {}}
                   transition={{ duration: 0.3, delay: 0.45 }}
                 >
-                  john.doe@example.com
+                  {/* john.doe@example.com */}
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0 }}
                   animate={isInView ? { opacity: 1 } : {}}
                   transition={{ duration: 0.3, delay: 0.5 }}
                 >
-                  +1 (555) 123-4567
+                  {/* +1 (555) 123-4567 */}
                 </motion.p>
               </div>
               <motion.div
@@ -142,9 +142,9 @@ export function Footer() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button className="mt-4" onClick={() => scrollToSection('#contact')}>
+                {/* <Button className="mt-4" onClick={() => scrollToSection('#contact')}>
                   Let's Work Together
-                </Button>
+                </Button> */}
               </motion.div>
             </motion.div>
           </div>
@@ -164,7 +164,7 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.7 }}
           >
             <p className="text-sm text-muted-foreground">
-              © {currentYear} John Doe. All rights reserved.
+              © {currentYear} Anupam Dhingra. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground flex items-center gap-1">
               Made with <motion.span
