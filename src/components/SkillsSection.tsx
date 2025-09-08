@@ -27,38 +27,43 @@ export function SkillsSection() {
 
   const skillCategories = [
     {
-      title: "Frontend Development",
+      title: "Product Management",
       skills: [
-        { name: "React/Next.js", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "Tailwind CSS", level: 95 },
-        { name: "JavaScript", level: 95 }
+        { name: "Product Vision & Design", level: 85 },
+        { name: "Requirements Elicitation", level: 95 },
+        { name: "Prioritization", level: 80 },
+        { name: "Stakeholder Management", level: 85 },
+        { name: "Agile Methodologies", level: 95 },
+        // { name: "Product Roadmapping", level: 75 }
       ]
     },
     {
-      title: "Backend Development",
+      title: "Business System Analysis",
       skills: [
-        { name: "Node.js", level: 85 },
+        { name: "Business Process Analysis", level: 90 },
+        { name: "Data Analysis & Reporting", level: 95 },
+        // { name: "Data Modeling", level: 90 },
+        { name: "Process Modeling & Improvement", level: 88 },
+        { name: "Solution Design", level: 75 },
+        { name: "Change Management", level: 90 }
+      ]
+    },
+    {
+      title: "Technical Skills",
+      skills: [
         { name: "Python", level: 80 },
-        { name: "PostgreSQL", level: 85 },
-        { name: "MongoDB", level: 75 }
-      ]
-    },
-    {
-      title: "Design & Tools",
-      skills: [
-        { name: "Figma", level: 90 },
-        { name: "Adobe Creative Suite", level: 80 },
-        { name: "Git/GitHub", level: 95 },
-        { name: "Docker", level: 70 }
+        { name: "SQL", level: 80 },
+        { name: "Snowflake", level: 60 },
+        { name: "PowerBI", level: 75 },
+        // { name: "Unix", level: 80 },
+        { name: "Jira", level: 95 }
       ]
     }
   ];
 
   const technologies = [
-    "React", "TypeScript", "Next.js", "Node.js", "Python", "PostgreSQL",
-    "MongoDB", "Tailwind CSS", "Figma", "Git", "Docker", "AWS", "Vercel",
-    "Firebase", "GraphQL", "REST APIs", "Jest", "Cypress"
+    "MS Office 365", "Confluence", "Python", "Postman", "PowerBI", "Azure Cloud", "Google Cloud Platform",
+"Bigquery", "Pyspark", "Tableau", "Unix", "SQL", "Selenium", "Jira", "SSMS", "Cucumber", "Rest API", "Pandas", "Teamcity", "Openlink's Endur", "CTC Gresham", "Snowflake", "Cognos", "Data Modeling", "Data Governance", "Data Visualization", "Snowflake-Cortex"
   ];
 
   return (
@@ -73,7 +78,7 @@ export function SkillsSection() {
           >
             <h2 className="text-3xl md:text-4xl mb-4">Skills & Expertise</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Technologies and tools I use to bring ideas to life
+              {/* Technologies and tools I use to bring ideas to life */}
             </p>
           </motion.div>
 
