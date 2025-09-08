@@ -10,23 +10,23 @@ export function AboutSection() {
   const highlights = [
     {
       icon: Code,
-      title: "Clean Code",
-      description: "Writing maintainable, scalable, and efficient code"
+      title: "Requirement Elicitation",
+      description: "Grasping user needs and business goals"
     },
     {
       icon: Palette,
-      title: "Design-Focused",
-      description: "Creating beautiful interfaces with attention to detail"
+      title: "Design Thinking",
+      description: "Crafting intuitive and engaging user experiences"
     },
     {
       icon: Users,
-      title: "User-Centered",
-      description: "Building products that users love and understand"
+      title: "Product Management",
+      description: "Bridging gaps between stakeholders and development teams"
     },
     {
       icon: Zap,
-      title: "Performance",
-      description: "Optimizing for speed and user experience"
+      title: "Storytelling",
+      description: "Driving decisions with data-driven narratives"
     }
   ];
 
@@ -59,7 +59,7 @@ export function AboutSection() {
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  I love tackling interesting challenges and finding creative ways to solve them. There's something really satisfying about diving into complex data or leading a project and watching it come together—I get energized by turning ideas into something tangible that actually makes a difference. 
+                  Think of me as your friendly neighborhood data detective and UX magician who gets genuinely excited about untangling complex problems. My superpower? Spotting opportunities others miss and transforming 'ugh, this is confusing' moments into those satisfying 'Aha!' experiences that make users smile. I've spent years navigating the wild worlds of finance and insurance – and trust me, I've delivered products that not only work beautifully but actually make people go 'wow, I never knew this could be so simple!' It's way more fun than it sounds, and those lightbulb moments from consumers? Pure gold. 
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
