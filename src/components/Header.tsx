@@ -29,7 +29,7 @@ export function Header() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            <span className="text-lg">John Doe</span>
+            <span className="text-lg">Anupam Dhingra</span>
           </motion.div>
 
           {/* Desktop Navigation */}
