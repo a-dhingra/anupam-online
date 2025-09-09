@@ -10,33 +10,51 @@ export function ProjectsSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   
+  // Import all images from assets folder
+  const images = import.meta.glob('../assets/Project_images/*.{png,jpg,jpeg,gif,svg}', { eager: true });
+
+// Helper function to get image by filename
+  const getImageByName = (filename) => {
+    const path = `../assets/${filename}`;
+    return images[path]?.default || null;
+  };
+
   const projects = [
     {
-      title: "TaskFlow Dashboard",
-      description: "A comprehensive project management dashboard built with React and TypeScript. Features real-time collaboration, task tracking, and analytics.",
-      image: "https://images.unsplash.com/photo-1665470909939-959569b20021?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBhcHBsaWNhdGlvbiUyMGRhc2hib2FyZHxlbnwxfHx8fDE3NTY0ODYzMzN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "Socket.io"],
-      liveUrl: "https://taskflow-demo.com",
-      githubUrl: "https://github.com/johndoe/taskflow",
+      title: "NASA Astronomy Picture of the Day App",
+      description: "A Python script that fetches and displays NASA's Astronomy Picture of the Day (APOD) using NASA's public API.",
+      image: "/src/assets/Project_images/nasa.jpg",
+      technologies: ["Python", "NASA API", "REST"],
+      // liveUrl: "https://taskflow-demo.com",
+      githubUrl: "https://github.com/a-dhingra/giraffe/blob/master/Fresh_Start/APIs/Nasa_Images.py#enroll-beta",
       featured: true
     },
     {
-      title: "FinanceTracker Mobile App",
-      description: "A React Native app for personal finance management with AI-powered expense categorization and insightful spending analytics.",
-      image: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzU2NDk2NTAxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["React Native", "TypeScript", "Firebase", "TensorFlow"],
-      liveUrl: "https://financetracker-app.com",
-      githubUrl: "https://github.com/johndoe/financetracker",
+      title: "Home Price Analysis using Zillow Data",
+      description: "A comprehensive analysis of home prices using Zillow data, employing data cleaning, visualization, and regression modeling to uncover market trends.",
+      image: "/src/assets/Project_images/house.jpg",
+      technologies: ["Python", "Jupyter Notebook"],
+      // liveUrl: "https://financetracker-app.com",
+      githubUrl: "https://github.com/a-dhingra/JupyterNotebooks/blob/master/Home%20Price%20Data%20in%20USA%20from%20Zillow.com.ipynb",
       featured: true
     },
     {
-      title: "ShopEase E-commerce Platform",
-      description: "Full-stack e-commerce solution with modern UI, payment integration, inventory management, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1694599048261-a1de00f0117e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjB3ZWJzaXRlJTIwZGVzaWdufGVufDF8fHx8MTc1NjUwNzMzNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["Next.js", "Stripe", "Prisma", "PostgreSQL", "Tailwind"],
-      liveUrl: "https://shopease-demo.com",
-      githubUrl: "https://github.com/johndoe/shopease",
-      featured: false
+      title: "College Admission Prediction",
+      description: "A machine learning model that predicts college admission chances based on various academic and extracurricular factors using classification algorithms.",
+      image: "/src/assets/Project_images/college.jpg",
+      technologies: ["Python", "Jupyter Notebook"],
+      // liveUrl: "https://shopease-demo.com",
+      githubUrl: "https://github.com/a-dhingra/JupyterNotebooks/blob/master/Admission_prediction.ipynb",
+      featured: true
+    },
+    {
+      title: "Avatar Quotes Generator",
+      description: "A fun project generating quotes from the animation webseries 'Avatar: The Last Airbender', using machine learning.",
+      image: "/src/assets/Project_images/avatar.jpg",
+      technologies: ["Python", "Jupyter Notebook"],
+      // liveUrl: "https://shopease-demo.com",
+      githubUrl: "https://github.com/a-dhingra/JupyterNotebooks/blob/master/iroh_quotes.ipynb",
+      featured: true
     }
   ];
 
@@ -52,7 +70,7 @@ export function ProjectsSection() {
           >
             <h2 className="text-3xl md:text-4xl mb-4">Featured Projects</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A showcase of my recent work and personal projects
+              A showcase of my personal projects
             </p>
           </motion.div>
 
@@ -86,9 +104,9 @@ export function ProjectsSection() {
                             animate={isInView ? { opacity: 1, scale: 1 } : {}}
                             transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
                           >
-                            <Badge className="absolute top-4 left-4 bg-primary">
+                            {/* <Badge className="absolute top-4 left-4 bg-primary">
                               Featured
-                            </Badge>
+                            </Badge> */}
                           </motion.div>
                         )}
                       </div>
@@ -143,10 +161,10 @@ export function ProjectsSection() {
                         >
                           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                             <Button size="sm" asChild>
-                              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                              {/* <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                                 <ExternalLink className="w-4 h-4 mr-2" />
                                 Live Demo
-                              </a>
+                              </a> */}
                             </Button>
                           </motion.div>
                           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -174,7 +192,7 @@ export function ProjectsSection() {
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button variant="outline" size="lg" asChild>
-                <a href="https://github.com/johndoe" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/a-dhingra" target="_blank" rel="noopener noreferrer">
                   <Github className="w-5 h-5 mr-2" />
                   View More on GitHub
                 </a>
