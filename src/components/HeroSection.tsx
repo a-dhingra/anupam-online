@@ -44,7 +44,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.7 }}
             >
-              Product Management  |  Data Analysis  |  Growth Strategy
+              Bridging Business Vision with Data-Driven Solutions
             </motion.h2>
             
             <motion.p 
@@ -53,7 +53,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.9 }}
             >
-              I create and execute solutions to problems pertaining to data, UI/UX and/or process. I have a knack for identifying growth opportunities and optimizing user experiences through data-driven strategies. My domain expertise has been in Capital Markets and Insurance.
+              I specialize in creating data-driven solutions that optimize processes, enhance user experiences, and unlock growth opportunities. With deep expertise in Capital Markets and Insurance, I transform complex business challenges into strategic advantages through thoughtful analysis and innovative problem-solving.
             </motion.p>
             
             <motion.div 
