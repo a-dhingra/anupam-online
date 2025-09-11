@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
-import  heroImage  from "../assets/profile_pic/Pic_resized.webp";
+import  heroImage  from "../assets/profile_pic/Pic_resized.png";
 
 export function HeroSection() {
   const scrollToSection = (sectionId: string) => {
