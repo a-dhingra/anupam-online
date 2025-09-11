@@ -5,6 +5,10 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { ExternalLink, Github } from "lucide-react";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
+import image1 from "/src/assets/Project_images/nasa.jpg";
+import image2 from "/src/assets/Project_images/house.jpg";
+import image3 from "/src/assets/Project_images/college.jpg";
+import image4 from "/src/assets/Project_images/avatar.jpg";
 
 export function ProjectsSection() {
   const ref = useRef(null);
@@ -23,7 +27,7 @@ export function ProjectsSection() {
     {
       title: "NASA Astronomy Picture of the Day App",
       description: "A Python script that fetches and displays NASA's Astronomy Picture of the Day (APOD) using NASA's public API.",
-      image: "/src/assets/Project_images/nasa.jpg",
+      image: image1,
       technologies: ["Python", "NASA API", "REST"],
       // liveUrl: "https://taskflow-demo.com",
       githubUrl: "https://github.com/a-dhingra/giraffe/blob/master/Fresh_Start/APIs/Nasa_Images.py#enroll-beta",
@@ -32,7 +36,7 @@ export function ProjectsSection() {
     {
       title: "Home Price Analysis using Zillow Data",
       description: "A comprehensive analysis of home prices using Zillow data, employing data cleaning, visualization, and regression modeling to uncover market trends.",
-      image: "/src/assets/Project_images/house.jpg",
+      image: image2,
       technologies: ["Python", "Jupyter Notebook"],
       // liveUrl: "https://financetracker-app.com",
       githubUrl: "https://github.com/a-dhingra/JupyterNotebooks/blob/master/Home%20Price%20Data%20in%20USA%20from%20Zillow.com.ipynb",
@@ -41,7 +45,7 @@ export function ProjectsSection() {
     {
       title: "College Admission Prediction",
       description: "A machine learning model that predicts college admission chances based on various academic and extracurricular factors using classification algorithms.",
-      image: "/src/assets/Project_images/college.jpg",
+      image: image3,
       technologies: ["Python", "Jupyter Notebook"],
       // liveUrl: "https://shopease-demo.com",
       githubUrl: "https://github.com/a-dhingra/JupyterNotebooks/blob/master/Admission_prediction.ipynb",
@@ -50,7 +54,7 @@ export function ProjectsSection() {
     {
       title: "Avatar Quotes Generator",
       description: "A fun project generating quotes from the animation webseries 'Avatar: The Last Airbender', using machine learning.",
-      image: "/src/assets/Project_images/avatar.jpg",
+      image: image4,
       technologies: ["Python", "Jupyter Notebook"],
       // liveUrl: "https://shopease-demo.com",
       githubUrl: "https://github.com/a-dhingra/JupyterNotebooks/blob/master/iroh_quotes.ipynb",
