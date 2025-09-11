@@ -1,3 +1,4 @@
+import React from "react";
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";

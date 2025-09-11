@@ -1,3 +1,4 @@
+import React from "react";
 import { Card, CardContent } from "./ui/card";
 import { Code, Palette, Users, Zap } from "lucide-react";
 import { motion, useInView } from "motion/react";
