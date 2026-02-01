@@ -10,6 +10,8 @@ import image1 from "/src/assets/Project_images/nasa.jpg";
 import image2 from "/src/assets/Project_images/house.jpg";
 import image3 from "/src/assets/Project_images/college.jpg";
 import image4 from "/src/assets/Project_images/avatar.jpg";
+import image5 from "/src/assets/Project_images/photography.jpg";
+import image6 from "/src/assets/Project_images/codeart.jpg";
 
 export function ProjectsSection() {
   const ref = useRef(null);
@@ -59,6 +61,24 @@ export function ProjectsSection() {
       technologies: ["Python", "Jupyter Notebook"],
       // liveUrl: "https://shopease-demo.com",
       githubUrl: "https://github.com/a-dhingra/JupyterNotebooks/blob/master/iroh_quotes.ipynb",
+      featured: true
+    },
+    {
+      title: "Photography Portfolio",
+      description: "A professional photography portfolio website showcasing photographic work with an elegant gallery interface and integrated contact functionality for client engagement.",
+      image: image5,
+      technologies: ["HTML", "CSS", "JavaScript", "Azure Static Web Apps"],
+      liveUrl: "https://lemon-wave-03d25f10f.2.azurestaticapps.net/",
+      // githubUrl: "",
+      featured: true
+    },
+    {
+      title: "Code Art Studio",
+      description: "An interactive generative art application built with p5.js that creates procedurally-generated visual compositions with real-time parameter controls, multiple art modes, and animation capabilities.",
+      image: image6,
+      technologies: ["p5.js", "JavaScript", "Canvas API", "Azure Static Web Apps"],
+      liveUrl: "https://green-sand-067e6130f.2.azurestaticapps.net/",
+      // githubUrl: "",
       featured: true
     }
   ];
@@ -158,28 +178,32 @@ export function ProjectsSection() {
                           ))}
                         </motion.div>
                         
-                        <motion.div 
+                        <motion.div
                           className="flex gap-3"
                           initial={{ opacity: 0, y: 20 }}
                           animate={isInView ? { opacity: 1, y: 0 } : {}}
                           transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
                         >
-                          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                            <Button size="sm" asChild>
-                              {/* <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                                <ExternalLink className="w-4 h-4 mr-2" />
-                                Live Demo
-                              </a> */}
-                            </Button>
-                          </motion.div>
-                          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                            <Button variant="outline" size="sm" asChild>
-                              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                                <Github className="w-4 h-4 mr-2" />
-                                Source
-                              </a>
-                            </Button>
-                          </motion.div>
+                          {project.liveUrl && (
+                            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                              <Button size="sm" asChild>
+                                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                                  <ExternalLink className="w-4 h-4 mr-2" />
+                                  Live Demo
+                                </a>
+                              </Button>
+                            </motion.div>
+                          )}
+                          {project.githubUrl && (
+                            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                              <Button variant="outline" size="sm" asChild>
+                                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                                  <Github className="w-4 h-4 mr-2" />
+                                  Source
+                                </a>
+                              </Button>
+                            </motion.div>
+                          )}
                         </motion.div>
                       </CardContent>
                     </div>
