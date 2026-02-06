@@ -28,39 +28,12 @@ export function ProjectsSection() {
 
   const projects = [
     {
-      title: "NASA Astronomy Picture of the Day App",
-      description: "A Python script that fetches and displays NASA's Astronomy Picture of the Day (APOD) using NASA's public API.",
-      image: image1,
-      technologies: ["Python", "NASA API", "REST"],
-      // liveUrl: "https://taskflow-demo.com",
-      githubUrl: "https://github.com/a-dhingra/giraffe/blob/master/Fresh_Start/APIs/Nasa_Images.py#enroll-beta",
-      featured: true
-    },
-    {
-      title: "Home Price Analysis using Zillow Data",
-      description: "A comprehensive analysis of home prices using Zillow data, employing data cleaning, visualization, and regression modeling to uncover market trends.",
-      image: image2,
-      technologies: ["Python", "Jupyter Notebook"],
-      // liveUrl: "https://financetracker-app.com",
-      githubUrl: "https://github.com/a-dhingra/JupyterNotebooks/blob/master/Home%20Price%20Data%20in%20USA%20from%20Zillow.com.ipynb",
-      featured: true
-    },
-    {
-      title: "College Admission Prediction",
-      description: "A machine learning model that predicts college admission chances based on various academic and extracurricular factors using classification algorithms.",
-      image: image3,
-      technologies: ["Python", "Jupyter Notebook"],
-      // liveUrl: "https://shopease-demo.com",
-      githubUrl: "https://github.com/a-dhingra/JupyterNotebooks/blob/master/Admission_prediction.ipynb",
-      featured: true
-    },
-    {
-      title: "Avatar Quotes Generator",
-      description: "A fun project generating quotes from the animation webseries 'Avatar: The Last Airbender', using machine learning.",
-      image: image4,
-      technologies: ["Python", "Jupyter Notebook"],
-      // liveUrl: "https://shopease-demo.com",
-      githubUrl: "https://github.com/a-dhingra/JupyterNotebooks/blob/master/iroh_quotes.ipynb",
+      title: "Code Art Studio",
+      description: "An interactive generative art application built with p5.js that creates procedurally-generated visual compositions with real-time parameter controls, multiple art modes, and animation capabilities.",
+      image: image6,
+      technologies: ["p5.js", "JavaScript", "Canvas API", "Azure Static Web Apps"],
+      liveUrl: "https://green-sand-067e6130f.2.azurestaticapps.net/",
+      // githubUrl: "",
       featured: true
     },
     {
@@ -73,12 +46,39 @@ export function ProjectsSection() {
       featured: true
     },
     {
-      title: "Code Art Studio",
-      description: "An interactive generative art application built with p5.js that creates procedurally-generated visual compositions with real-time parameter controls, multiple art modes, and animation capabilities.",
-      image: image6,
-      technologies: ["p5.js", "JavaScript", "Canvas API", "Azure Static Web Apps"],
-      liveUrl: "https://green-sand-067e6130f.2.azurestaticapps.net/",
-      // githubUrl: "",
+      title: "Avatar Quotes Generator",
+      description: "A fun project generating quotes from the animation webseries 'Avatar: The Last Airbender', using machine learning.",
+      image: image4,
+      technologies: ["Python", "Jupyter Notebook"],
+      // liveUrl: "https://shopease-demo.com",
+      githubUrl: "https://github.com/a-dhingra/JupyterNotebooks/blob/master/iroh_quotes.ipynb",
+      featured: true
+    },
+    {
+      title: "College Admission Prediction",
+      description: "A machine learning model that predicts college admission chances based on various academic and extracurricular factors using classification algorithms.",
+      image: image3,
+      technologies: ["Python", "Jupyter Notebook"],
+      // liveUrl: "https://shopease-demo.com",
+      githubUrl: "https://github.com/a-dhingra/JupyterNotebooks/blob/master/Admission_prediction.ipynb",
+      featured: true
+    },
+    {
+      title: "Home Price Analysis using Zillow Data",
+      description: "A comprehensive analysis of home prices using Zillow data, employing data cleaning, visualization, and regression modeling to uncover market trends.",
+      image: image2,
+      technologies: ["Python", "Jupyter Notebook"],
+      // liveUrl: "https://financetracker-app.com",
+      githubUrl: "https://github.com/a-dhingra/JupyterNotebooks/blob/master/Home%20Price%20Data%20in%20USA%20from%20Zillow.com.ipynb",
+      featured: true
+    },
+    {
+      title: "NASA Astronomy Picture of the Day App",
+      description: "A Python script that fetches and displays NASA's Astronomy Picture of the Day (APOD) using NASA's public API.",
+      image: image1,
+      technologies: ["Python", "NASA API", "REST"],
+      // liveUrl: "https://taskflow-demo.com",
+      githubUrl: "https://github.com/a-dhingra/giraffe/blob/master/Fresh_Start/APIs/Nasa_Images.py#enroll-beta",
       featured: true
     }
   ];
