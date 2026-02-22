@@ -2,94 +2,85 @@ import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { CalendarDays, MapPin } from "lucide-react";
-import { title } from "process";
 
 export function ExperienceSection() {
   const experiences = [
     {
-      title: "Business Systems Analyst III | Product Manager in Business Intelligence",
+      title: "Business Systems Analyst III | Product Manager, Business Intelligence",
       company: "Arch Capital Group",
       location: "Raleigh, NC",
-      duration: "Feb 2024 - Present",
-      description: "Leading strategic initiatives in business intelligence reporting & insights, as well as data architecture modernization.",
+      duration: "Feb 2024 – Present",
+      description: "Leading BI platform modernization at Arch MI — owning the full product lifecycle from executive roadmap to agile delivery across data engineering and reporting.",
       achievements: [
-        "Led the design, implementation and launch of a new transaction flow supporting 2nd liens business growth at Arch MI.",
-        "Modernized BI platform by developing Power BI dashboards with AI enabled Q&A, while integrating and repurposing legacy Cognos reports.",
-        "Built and maintained a strategic product roadmap aligning business and technology priorities, and managed iterative delivery through feature and story breakdowns.",
-        "Engineered a Python-based data lineage system tracking 300+ reports, bridging technical and business understanding.",
-        "Built correlation on report similatiry analysis and duplicate data identification.",
-        "Optimized production release cycles by refining change management, enhancing product lifecycle control.",
-        "Led cloud migration planning for product that leveraged Azure."
+        "Defined a <strong>15-month BI modernization roadmap</strong> that secured <strong>$1.5M+</strong> in executive investment and aligned multiple business units on shared data priorities.",
+        "Launched a new <strong>2nd lien transaction flow</strong> adding $500K+ insurance-in-force within 6 months; replaced legacy Cognos reports with <strong>AI-enabled Power BI dashboards</strong>.",
+        "Engineered a <strong>Python-based data observability system</strong> tracking 300+ reports across 5 data sources — cutting incident resolution time by <strong>60%</strong> and release cycles from 6 hours to <strong>90 minutes</strong>."
       ],
-      technologies: ["Snowflake", "IBM Cognos", "PowerBI", "Data Vault", "SQL","Coalesc", "Python" ]
+      technologies: ["Snowflake", "Power BI", "Python", "IBM Cognos", "Data Vault", "SQL", "Azure"]
     },
     {
-      title: "Business Systems Analyst III - Alternative Markets",
+      title: "Business Systems Analyst III, Alternative Markets",
       company: "Arch Capital Group",
       location: "Raleigh, NC",
-      duration: "Nov 2022 - Feb 2024",
-      description: "Modernized loan data systems through UI/UX design, data validation architecture, and ML-driven analytics to enable data-driven lending decisions.",
+      duration: "Nov 2022 – Feb 2024",
+      description: "Modernized loan data systems end-to-end — from UI/UX design and data validation architecture to ML-driven analytics — enabling data-driven lending decisions at scale.",
       achievements: [
-        "Designed and delivered intuitive UI/UX solutions for loan data ingestion and analysis platforms using Balsamiq, enhancing user experience while adhering to customer-centric product management methodologies.",
-        "Engineered comprehensive data validation frameworks with automated rule sets to detect and flag inconsistencies across multiple market data sources, ensuring data integrity and reliability.",
-        "Architected enterprise data flow systems to establish a unified golden source of loan data, enabling strategic data-driven decision making across business operations.",
-        "Developed machine learning classification models as proof-of-concept solutions to optimize loan purchase identification processes, demonstrating advanced analytical capabilities and innovation."
+        "Prevented <strong>$1M in erroneous loan purchases</strong> by engineering automated data validation rules across 5 market data sources, improving data accuracy from <strong>85% to 99%</strong>.",
+        "Architected a <strong>golden source data pipeline</strong> consolidating 5 external systems into a single master repository, eliminating manual reconciliation and enabling real-time purchase decisions.",
+        "Redesigned the <strong>UI/UX</strong> for loan data ingestion and analysis platforms using <strong>Figma and Balsamiq</strong>, conducting A/B tests with end users; developed an <strong>ML classification model</strong> (proof of concept) to optimize loan purchase identification."
       ],
-      technologies: ["Azure", "Python", "Databricks", "UI/UX", "SQL", "Balsamiq" ]
+      technologies: ["Azure", "Databricks", "Python", "SQL", "Figma", "Balsamiq", "UI/UX"]
     },
     {
       title: "Business Analyst | Product Owner",
-      company: "Credit Suisse",
+      company: "Credit Suisse (UBS)",
       location: "Raleigh, NC",
-      duration: "Feb 2020 - Nov 2022",
-      description: "Delivered global reconciliation technology solutions across NA/EU/UK jurisdictions while leading cross-functional teams and translating regulatory requirements into technical specifications.",
+      duration: "Feb 2020 – Nov 2022",
+      description: "Product Owner for regulatory reconciliation technology across NA/EU/UK jurisdictions, driving the implementation and expansion of the Gresham platform while leading cross-functional delivery teams.",
       achievements: [
-        "Responded to regulatory changes by discerning the functional variations and transforming them to technical specifications.",
-        "Fostered a strong relationship with the business and partner IT teams.",
-        "Cultivated off-shore team in production incident resolutions and business processes.",
-        "Performed hands-on data analysis for production query resolutions."
+        "Expanded <strong>Gresham platform controls from 55 to 85</strong> across asset classes and jurisdictions, improving multi-jurisdictional reporting compliance and earning <strong>3 business excellence awards</strong>.",
+        "Resolved <strong>100+ monthly data queries</strong> at 99% SLA compliance; led quarterly roadmap planning across 15+ regulatory initiatives, maintaining <strong>zero audit findings</strong>.",
+        "Directed two cross-functional teams of <strong>12+ members</strong> spanning business, compliance, and technology — delivering all regulatory changes within mandated deadlines."
       ],
-      technologies: ["Python", "Unix", "Reconciliation", "SQL", "Grisham Rcon Tool", "MS Office Suite", "Confluence", "Jira" ]
+      technologies: ["Gresham Rcon", "Python", "SQL", "Unix", "Jira", "Confluence"]
     },
     {
       title: "Business Systems Analyst (Quality Assurance)",
       company: "Deutsche Bank",
       location: "Cary, NC",
-      duration: "Oct 2015 - Feb 2020",
-      description: "Led global equity regulatory reporting (CAT, OATS, MIFID II, SFC) to international regulators while spearheading data normalization initiatives and FIX message mapping across Deutsche Bank's trading platforms.",
+      duration: "Oct 2015 – Feb 2020",
+      description: "Led global equity regulatory reporting (CAT, OATS, MiFID II, SFC) and a company-wide data normalization initiative across Deutsche Bank's trading platforms, managing onshore and offshore teams.",
       achievements: [
-        "My primary duty was to understand the new requirements and variations to existing reports, document them, and validated the reports generated from our reporting engine.",
-        "Was instrumental in data normalization initiative for all equity trading applications across global Deutsche Bank locations.",
-        "Played a significant role in creating a data dictionary which enabled the mapped of FIX transaction messages flow for different trade flows.",
-        "Received multiple recognitions in this job."
+        "Ensured accurate delivery of equity regulatory reports to global regulators, contributing to Deutsche Bank ranking in the <strong>top 3 investment banks</strong> on FINRA's Firm Summary Scorecard for <strong>6 consecutive months</strong>.",
+        "Led data normalization across <strong>120 global equity trading applications</strong>, conforming all systems to a custom FIX protocol and mapping the full spectrum of trade flows and events.",
+        "Designed a <strong>trade flow visualization tool</strong> enabling analysis of 100K+ daily transactions with zero training required; built QA automation (Cucumber) with <strong>100% business flow coverage</strong>."
       ],
-      technologies: ["SQL", "python", "Unix", "Cucumber", "Git", "TeamCity", "Jenkins" ]
+      technologies: ["SQL", "Python", "Cucumber", "Unix", "Git", "Jenkins", "TeamCity"]
     },
     {
       title: "Senior Systems Analyst",
       company: "Wells Fargo",
       location: "Charlotte, NC",
-      duration: "Aug 2013 - Oct 2015",
-      description: "Delivered dual business and quality analysis for commodities trading platforms, achieving 0% production defect rate over two years while leading UI/UX modernization initiatives.",
+      duration: "Aug 2013 – Oct 2015",
+      description: "Delivered dual business and quality analysis for commodities trading platforms (portfolio management, risk management, trade capture), serving Front Office and Middle Office stakeholders.",
       achievements: [
-        "Worked on portfolio management, risk management and trade caption applications.",
-        "Had a good exposure to Openlink's Endur application during this job.",
-        "Was a guiding force in building a new UI of the application. Focus was on creating an impressive UX.",
-        "A feather in the hat was having a 0% defect leakage in production release over a span of over two years."
+        "Achieved <strong>0% defect leakage</strong> in production deployments over 2+ years despite an aggressive release cadence — across portfolio management, risk management, and trade capture applications.",
+        "Guided UI modernization of a legacy commodities platform (Openlink Endur), capturing <strong>100% of all functional flows</strong> while designing an improved user experience.",
+        "Partnered with Front Office Traders and Middle Office Managers through structured discovery to translate frontline feedback into user stories, keeping the product roadmap aligned with live trading needs."
       ],
-      technologies: ["MS Office Suite", "Unix", "SQL", "Openlink Endur","ICE"]     
+      technologies: ["Openlink Endur", "SQL", "Unix", "ICE", "MS Office Suite"]
     },
     {
       title: "Business Systems Analyst",
       company: "Capital Group Companies",
       location: "Los Angeles, CA",
-      duration: "Oct 2009 - Jul 2013",
-      description: "Managed fixed income data analytics and application validation processes while ensuring system stability and delivering cost savings through strategic resource optimization.",
+      duration: "Oct 2009 – Jul 2013",
+      description: "Managed validation and analytics for fixed income data applications, delivering measurable cost savings and faster time-to-market through quality process optimization.",
       achievements: [
-        "Ensured stability, enhancement verifications and regression validations of a multitude of fixed income applications.",
-        "Achieved considerable savings in the project through proper resource allocation."
+        "Generated <strong>$150K+ in annual savings</strong> by improving resource utilization through effective Quality Management practices.",
+        "Increased <strong>speed-to-market by 50%</strong> for fixed income analytics and portfolio management applications through streamlined QA and release processes."
       ],
-      technologies: ["SQL", "MS Office Suite", "HP Quality Center" ]
+      technologies: ["SQL", "HP Quality Center", "MS Office Suite"]
     }
   ];
 
@@ -149,10 +140,9 @@ export function ExperienceSection() {
                     <p className="text-muted-foreground mb-4">{exp.description}</p>
                     
                     <div className="mb-4">
-                      <h4 className="mb-2">Key Achievements:</h4>
-                      <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
+                      <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
                         {exp.achievements.map((achievement, achievementIndex) => (
-                          <li key={achievementIndex}>{achievement}</li>
+                          <li key={achievementIndex} dangerouslySetInnerHTML={{ __html: achievement }} />
                         ))}
                       </ul>
                     </div>
