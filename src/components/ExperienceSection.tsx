@@ -84,7 +84,13 @@ export function ExperienceSection() {
     }
   ];
 
-  const education = [
+  const education: {
+    degree: string;
+    school: string;
+    location: string;
+    duration: string;
+    details?: string;
+  }[] = [
     {
       degree: "Masters of Business Administration (MBA), Finance & Marketing",
       school: "Indian Institute of Technology (IIT) Roorkee",
@@ -189,9 +195,11 @@ export function ExperienceSection() {
                       </div>
                     </div>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{edu.details}</p>
-                  </CardContent>
+                  {edu.details && (
+                    <CardContent>
+                      <p className="text-muted-foreground">{edu.details}</p>
+                    </CardContent>
+                  )}
                 </Card>
               ))}
             </div>

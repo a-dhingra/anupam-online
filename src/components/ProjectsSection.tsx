@@ -18,10 +18,10 @@ export function ProjectsSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   
   // Import all images from assets folder
-  const images = import.meta.glob('../assets/Project_images/*.{png,jpg,jpeg,gif,svg}', { eager: true });
+  const images = import.meta.glob<{ default: string }>('../assets/Project_images/*.{png,jpg,jpeg,gif,svg}', { eager: true });
 
 // Helper function to get image by filename
-  const getImageByName = (filename) => {
+  const getImageByName = (filename: string) => {
     const path = `../assets/${filename}`;
     return images[path]?.default || null;
   };

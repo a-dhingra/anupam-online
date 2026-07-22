@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
-import  heroImage  from "../assets/profile_pic/Pic_resized.png";
+import  heroImage  from "../assets/profile_pic/Pic_resized.webp";
 
 export function HeroSection() {
   const scrollToSection = (sectionId: string) => {
@@ -125,12 +125,13 @@ export function HeroSection() {
                 transition={{ duration: 1, delay: 2 }}
               >
                 <ImageWithFallback
-                  // src="https://unsplash.com/photos/man-wearing-a-beanie-and-shirt-works-on-a-laptop-n2QIWPTYxOg"
-                  // src="https://images.unsplash.com/photo-1576558656222-ba66febe3dec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDF8fHx8MTc1NjQ3NjcyOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  // src="/src/assets/profile_pic/AnupamDhingra.jpg"
-                  src= { heroImage }
+                  src={heroImage}
                   alt="Anupam Dhingra - Profile Picture"
                   className="w-full h-full object-cover"
+                  loading="eager"
+                  fetchPriority="high"
+                  width={320}
+                  height={320}
                 />
               </motion.div>
               

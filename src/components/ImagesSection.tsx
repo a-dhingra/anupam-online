@@ -13,7 +13,7 @@ import {
   ChevronRight,
   Filter
 } from 'lucide-react';
-import { motion, useInView, AnimatePresence } from 'framer-motion';
+import { motion, useInView, AnimatePresence } from 'motion/react';
 
 // Mock image data - replace with your actual image imports from the three folders
 const mockFlickrImages = [

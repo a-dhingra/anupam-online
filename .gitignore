@@ -1,3 +1,9 @@
 node_modules
-src/.DS_Store
-src/assets/.DS_Store
+
+# OS files
+.DS_Store
+**/.DS_Store
+
+# Logs
+*.log
+npm-debug.log*

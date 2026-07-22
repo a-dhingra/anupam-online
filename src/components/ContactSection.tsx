@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Mail, MapPin, Github, Linkedin } from "lucide-react";
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
+import { track } from "../lib/analytics";
 
 const EMAIL = "maveric_anupam@yahoo.com";
 
@@ -68,7 +69,11 @@ export function ContactSection() {
                     whileTap={{ scale: 0.97 }}
                   >
                     <Button size="lg" asChild>
-                      <a href={`mailto:${EMAIL}`} className="flex items-center gap-2">
+                      <a
+                        href={`mailto:${EMAIL}`}
+                        className="flex items-center gap-2"
+                        onClick={() => track("Contact: Email")}
+                      >
                         <Mail className="w-5 h-5" />
                         Email me
                       </a>
@@ -101,6 +106,7 @@ export function ContactSection() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2"
+                            onClick={() => track(`Contact: ${link.label}`)}
                           >
                             <link.icon className="w-4 h-4" />
                             {link.label}

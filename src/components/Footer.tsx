@@ -18,7 +18,7 @@ export function Footer() {
     { name: "Contact", href: "#contact" }
   ];
 
-  const socialLinks = [
+  const socialLinks: { icon: React.ElementType; href: string; label: string }[] = [
     // { icon: Github, href: "https://github.com/johndoe", label: "GitHub" },
     // { icon: Linkedin, href: "https://linkedin.com/in/johndoe", label: "LinkedIn" },
     // { icon: Mail, href: "mailto:john.doe@example.com", label: "Email" }
