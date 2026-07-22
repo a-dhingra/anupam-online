@@ -1,297 +1,129 @@
-import React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
-import { Label } from "./ui/label";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
-import { useState, useRef } from "react";
+import { Mail, MapPin, Github, Linkedin } from "lucide-react";
+import { useRef } from "react";
 import { motion, useInView } from "motion/react";
+
+const EMAIL = "anupamdhingra@gmail.com";
 
 export function ContactSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // In a real application, you would send the form data to a server
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
-
-  // const contactInfo = [
-  //   {
-  //     icon: Mail,
-  //     label: "Email",
-  //     value: "anupamdhingra@gmail.com",
-  //     href: "mailto:anupamdhingra@gmail.com"
-  //   },
-  //   {
-  //     icon: Phone,
-  //     label: "Phone",
-  //     value: "+1 (310) 733-7049",
-  //     href: "tel:+15551234567"
-  //   },
-  //   {
-  //     icon: MapPin,
-  //     label: "Location",
-  //     value: "Cary, NC",
-  //     href: null
-  //   }
-  // ];
-
-  const socialLinks = [
+  const links = [
     {
-      icon: Github,
-      label: "GitHub",
-      href: "https://github.com/a-dhingra"
+      icon: Mail,
+      label: "Email me",
+      value: EMAIL,
+      href: `mailto:${EMAIL}`,
+      primary: true,
+      external: false,
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/anupamdhingra"
+      value: "in/anupamdhingra",
+      href: "https://linkedin.com/in/anupamdhingra",
+      primary: false,
+      external: true,
     },
-    // {
-    //   icon: Twitter,
-    //   label: "Twitter",
-    //   href: "https://twitter.com/johndoe"
-    // }
+    {
+      icon: Github,
+      label: "GitHub",
+      value: "a-dhingra",
+      href: "https://github.com/a-dhingra",
+      primary: false,
+      external: true,
+    },
   ];
 
   return (
     <section id="contact" className="py-20 bg-muted/50" ref={ref}>
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
+        <div className="max-w-3xl mx-auto">
+          <motion.div
+            className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-1xl mb-4">Get In Touch</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Have a project in mind or want to collaborate? I'd love to hear from you.
+            <h2 className="text-3xl md:text-4xl mb-4">Get In Touch</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Have a project in mind or want to collaborate? The fastest way to
+              reach me is email — I read every message and reply personally.
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-1 gap-2">
-            {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              {/* <Card>
-                <CardHeader>
-                  <CardTitle>Send me a message</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <motion.div 
-                        className="space-y-2"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.4, delay: 0.3 }}
-                      >
-                        <Label htmlFor="name">Name</Label>
-                        <Input
-                          id="name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleInputChange}
-                          required
-                          placeholder="Your name"
-                          className="transition-all duration-200 focus:scale-[1.02]"
-                        />
-                      </motion.div>
-                      <motion.div 
-                        className="space-y-2"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.4, delay: 0.35 }}
-                      >
-                        <Label htmlFor="email">Email</Label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          required
-                          placeholder="anupamdhingra@gmail.com"
-                          className="transition-all duration-200 focus:scale-[1.02]"
-                        />
-                      </motion.div>
-                    </div>
-                    
-                    <motion.div 
-                      className="space-y-2"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={isInView ? { opacity: 1, y: 0 } : {}}
-                      transition={{ duration: 0.4, delay: 0.4 }}
-                    >
-                      <Label htmlFor="subject">Subject</Label>
-                      <Input
-                        id="subject"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleInputChange}
-                        required
-                        placeholder="What's this about?"
-                        className="transition-all duration-200 focus:scale-[1.02]"
-                      />
-                    </motion.div>
-                    
-                    <motion.div 
-                      className="space-y-2"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={isInView ? { opacity: 1, y: 0 } : {}}
-                      transition={{ duration: 0.4, delay: 0.45 }}
-                    >
-                      <Label htmlFor="message">Message</Label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        required
-                        placeholder="Tell me about your project or idea..."
-                        className="min-h-32 transition-all duration-200 focus:scale-[1.02]"
-                      />
-                    </motion.div>
-                    
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={isInView ? { opacity: 1, y: 0 } : {}}
-                      transition={{ duration: 0.4, delay: 0.5 }}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <Button type="submit" size="lg" className="w-full">
-                        Send Message
-                      </Button>
-                    </motion.div>
-                  </form>
-                </CardContent>
-              </Card> */}
-            </motion.div>
-
-            {/* Contact Information */}
-            <motion.div 
-              className="space-y-8"
-              initial={{ opacity: 0, x: 30 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              {/* <Card>
-                <CardHeader>
-                  <CardTitle>Contact Information</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  {contactInfo.map((contact, index) => (
-                    <motion.div 
-                      key={index} 
-                      className="flex items-center gap-4"
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={isInView ? { opacity: 1, x: 0 } : {}}
-                      transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-                      whileHover={{ x: 5 }}
-                    >
-                      <motion.div 
-                        className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center"
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <contact.icon className="w-5 h-5 text-primary" />
-                      </motion.div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">{contact.label}</p>
-                        {contact.href ? (
-                          <a 
-                            href={contact.href}
-                            className="hover:text-primary transition-colors"
-                          >
-                            {contact.value}
-                          </a>
-                        ) : (
-                          <p>{contact.value}</p>
-                        )}
-                      </div>
-                    </motion.div>
-                  ))}
-                </CardContent>
-              </Card> */}
-
-              <Card>
-                <CardHeader>
-                  <CardTitle></CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <motion.div 
-                    className="flex gap-4 flex-wrap justify-center items-center"
-                    initial={{ opacity: 0 }}
-                    animate={isInView ? { opacity: 1 } : {}}
-                    transition={{ duration: 0.4, delay: 0.8 }}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <Card>
+              <CardContent className="p-8 space-y-8">
+                {/* Primary CTA */}
+                <div className="flex flex-col items-center gap-4 text-center">
+                  <motion.div
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.97 }}
                   >
-                    {socialLinks.map((social, index) => (
+                    <Button size="lg" asChild>
+                      <a href={`mailto:${EMAIL}`} className="flex items-center gap-2">
+                        <Mail className="w-5 h-5" />
+                        Email me
+                      </a>
+                    </Button>
+                  </motion.div>
+                  <a
+                    href={`mailto:${EMAIL}`}
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {EMAIL}
+                  </a>
+                </div>
+
+                {/* Secondary links */}
+                <div className="flex flex-wrap justify-center gap-4">
+                  {links
+                    .filter((l) => !l.primary)
+                    .map((link, index) => (
                       <motion.div
-                        key={index}
+                        key={link.label}
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.3, delay: 0.9 + index * 0.1 }}
+                        transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
                         whileHover={{ scale: 1.05, y: -2 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          asChild
-                        >
+                        <Button variant="outline" size="sm" asChild>
                           <a
-                            href={social.href}
+                            href={link.href}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2"
                           >
-                            <social.icon className="w-4 h-4" />
-                            {social.label}
+                            <link.icon className="w-4 h-4" />
+                            {link.label}
                           </a>
                         </Button>
                       </motion.div>
                     ))}
-                  </motion.div>
-                  
-                  <motion.div 
-                    className="mt-6 p-4 bg-muted rounded-lg"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.4, delay: 1.2 }}
-                  >
-                    {/* <p className="text-sm text-muted-foreground">
-                      Available for freelance projects and full-time opportunities. 
-                      Let's build something amazing together!
-                    </p> */}
-                  </motion.div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
+                </div>
+
+                {/* Location + availability */}
+                <div className="flex flex-col items-center gap-3 pt-2 border-t">
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground pt-6">
+                    <MapPin className="w-4 h-4" />
+                    Cary, NC
+                  </div>
+                  <p className="text-sm text-center text-muted-foreground max-w-md">
+                    Open to product, data, and analytics opportunities and
+                    collaborations. Let&apos;s build something meaningful together.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
       </div>
     </section>
