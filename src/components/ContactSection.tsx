@@ -4,7 +4,7 @@ import { Mail, MapPin, Github, Linkedin } from "lucide-react";
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 
-const EMAIL = "anupamdhingra@gmail.com";
+const EMAIL = "maveric_anupam@yahoo.com";
 
 export function ContactSection() {
   const ref = useRef(null);

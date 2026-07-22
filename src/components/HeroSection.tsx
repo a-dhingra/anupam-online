@@ -86,7 +86,7 @@ export function HeroSection() {
               {[
                 { icon: Github, href: "https://github.com/a-dhingra", label: "GitHub" },
                 { icon: Linkedin, href: "https://linkedin.com/in/anupamdhingra", label: "LinkedIn" },
-                { icon: Mail, href: "mailto:anupamdhingra@gmail.com", label: "Email" }
+                { icon: Mail, href: "mailto:maveric_anupam@yahoo.com", label: "Email" }
               ].map((social, index) => (
                 <motion.div
                   key={social.label}
